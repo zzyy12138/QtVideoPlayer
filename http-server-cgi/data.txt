@@ -1,0 +1,3 @@
+﻿<a href=http://www.sina.com>sina新浪</a><br>新浪的首页<p>
+<a href=http://www.itcast.cn>itcast传智播客</a><br>北京传智播客教育科技有限公司——专注于Java、.Net、iOS、C/C++、php、网页平面设计工程师的培养<p>
+<a href=http://www.baidu.com>baidu百度</a><br>百度的首页<p>

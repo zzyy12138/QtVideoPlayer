@@ -1,0 +1,38 @@
+#!/bin/sh
+
+WHOAMI=`whoami`
+
+PID=`ps -u $WHOAMI | grep myhttpd | awk '{print $1}'`
+
+if (test "$#" = 0) then
+	echo "Usage: $0 [stop] [start] [status]"
+	exit 0
+fi
+
+if (test "$1" = "start") then
+	if (test "$PID" = "") then
+		./src/myhttpd 80 1
+	else
+		echo "myhttp is running"
+	fi
+	exit 0
+fi
+
+if (test "$1" = "stop") then
+	if (test "$PID" != "") then
+		kill $PID
+	fi
+	exit 0
+fi
+
+if (test "$1" = "status") then
+	if (test "$PID" = "") then
+		echo "myhttp is not run"
+	else
+		echo "myhttp is running"
+	fi
+	exit 0
+fi
+
+echo "Usage: $0 [stop] [start] [status]"
+
